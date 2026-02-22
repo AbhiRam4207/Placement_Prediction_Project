@@ -3,10 +3,10 @@
 This project aims to predict student placement outcomes and expected salary using machine learning. It is designed to help students—especially from Tier-2 and Tier-3 colleges—understand how their academic background, technical skills, and extracurricular activities impact their placement chances.
 
 ## ✨ Final Output
-<img src="static/images/pl1.png" alt="Placement Screenshot 1" width="100%">
-<img src="static/images/pl2.png" alt="Placement Screenshot 2" width="100%">
-<img src="static/images/pl3.png" alt="Placement Screenshot 3" width="100%">
 
+<img src="static/images/placement_screenshot_1.png" alt="Placement Screenshot 1" width="100%">
+<img src="static/images/placement_screenshot_2.png" alt="Placement Screenshot 2" width="100%">
+<img src="static/images/placement_screenshot_3.png" alt="Placement Screenshot 3" width="100%">
 ---
 
 ## 📚 Table of Contents
