@@ -1,0 +1,21 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs
+.vscode/
+.idea/
+
+# Large Model Files (Keep them if you want them on GitHub, otherwise uncomment below)
+# model1.pkl
+# model.pkl
+
+# OS stuff
+.DS_Store
+Thumbs.db

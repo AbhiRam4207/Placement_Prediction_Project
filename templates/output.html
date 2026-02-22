@@ -1,26 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
-    <title>Placement Prediction</title>
+    <title>Prediction Results | Placement Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @media print {
+
+            .navbar,
+            .btn-outline,
+            .btn-primary,
+            .footer,
+            .no-print {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <nav class="navbar">
+        <a href="/" class="logo">Placement Predictor</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/index">Predict Now</a>
+        </div>
+    </nav>
+
     <div class="container">
-        <header>
-            <h1>Placement Prediction Result</h1>
-        </header>
-        <main>
-            <div class="result-container">
-                <h2>Your Result is</h2>
-                <div class="output">
-                    <p>{{ output }}</p>
-                    <p>{{ output2 }}</p>
+        <div class="card result-card">
+            <h2 style="margin-bottom: 2rem; color: var(--text-muted);">Career Outlook Report</h2>
+
+            <div id="result-header">
+                {% if is_placed %}
+                <span class="status-badge status-placed">Probable Placement</span>
+                <div class="prob-score">Probability: {{ probability }}%</div>
+                <div class="salary-highlight">
+                    {{ output2.split('₹')[1] if '₹' in output2 else 'N/A' }}
                 </div>
+                {% else %}
+                <span class="status-badge status-unplaced">Action Required</span>
+                <div class="prob-score" style="color: var(--accent-color);">Probability: {{ probability }}%</div>
+                <h3 style="font-size: 2rem; color: var(--accent-color); margin: 1.5rem 0;">Needs Improvement</h3>
+                {% endif %}
+                <p style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 2rem;">{{ output }}</p>
             </div>
-        </main>
+
+            <!-- Radar Chart Section -->
+            <div class="chart-container">
+                <canvas id="profileChart"></canvas>
+            </div>
+
+            <div class="no-print" style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center;">
+                <a href="javascript:void(0)" onclick="window.print()" class="btn btn-outline"
+                    style="border-color: var(--secondary-color); color: var(--secondary-color);">📥 Download Report
+                    (PDF)</a>
+                <a href="/index" class="btn btn-outline">New Prediction</a>
+                <a href="/" class="btn btn-primary" style="width: auto;">Back to Home</a>
+            </div>
+        </div>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Placement Predictor. Data-driven career insights.</p>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('profileChart');
+
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: {{ chart_labels | safe }},
+            datasets: [{
+                label: 'Candidate Profile',
+                data: {{ chart_values | safe }},
+            fill: true,
+            backgroundColor: 'rgba(26, 35, 126, 0.2)',
+            borderColor: 'rgb(26, 35, 126)',
+            pointBackgroundColor: 'rgb(26, 35, 126)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(26, 35, 126)'
+                }, {
+                label: 'Target Benchmark',
+                data: [8, 3, 4, 6, 8, 8.5], // Illustrative benchmark
+                fill: true,
+                backgroundColor: 'rgba(38, 166, 154, 0.1)',
+                borderColor: 'rgb(38, 166, 154)',
+                pointBackgroundColor: 'rgb(38, 166, 154)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(38, 166, 154)'
+            }]
+            },
+            options: {
+            elements: {
+                line: {
+                    borderWidth: 3
+                }
+            },
+            scales: {
+                r: {
+                    angleLines: {
+                        display: false
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 10
+                }
+            }
+        }
+        });
+    </script>
 </body>
+
 </html>

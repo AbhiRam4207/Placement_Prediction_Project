@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>PLACEMENT PREDICTION</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style3.css') }}"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Placement Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
+    <nav class="navbar">
+        <a href="/" class="logo">Placement Predictor</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/index">Predict Now</a>
+        </div>
+    </nav>
 
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">PLACEMENT PREDICTION</h2>
+    <div class="container">
+        <div class="card">
+            <h1
+                style="color: var(--primary-color); margin-bottom: 2rem; border-bottom: 3px solid var(--secondary-color); display: inline-block;">
+                Our Mission</h1>
+            <p style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 2rem;">
+                The Placement Predictor is a cutting-edge platform designed to bridge the gap between academic
+                preparation and professional recruitment. Our goal is to empower the next generation of engineers and
+                job seekers with data-driven insights.
+            </p>
+
+            <div class="form-grid" style="margin-top: 3rem;">
+                <div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Data-Driven Intelligence</h3>
+                    <p style="color: var(--text-muted);">We analyze thousands of data points including resumes, academic
+                        performance, and current industry trends to provide high-probability predictions.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Actionable Insights</h3>
+                    <p style="color: var(--text-muted);">Beyond simple yes/no answers, we provide actionable feedback on
+                        skill enhancement and educational paths to ensure you stay competitive.</p>
+                </div>
             </div>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/about">ABOUT</a></li>
-                    
-                </ul>
+            <div
+                style="margin-top: 4rem; background: var(--background-bg); padding: 2.5rem; border-radius: var(--radius-md);">
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Our Technology</h3>
+                <p style="color: var(--text-main);">
+                    Using advanced Machine Learning models like Random Forest and Decision Trees, our system evaluates
+                    complex interactions between your technical skills, internship experiences, and academic record to
+                    estimate your employability score with high precision.
+                </p>
             </div>
+        </div>
+    </div>
 
-            
-        </div> 
-        <div class="content">
-            <p class="par">The Placement Prediction App is a cutting-edge tool designed to empower students 
-                 and job<br> seekers in navigating the competitive job market. Leveraging advanced algorithms,
-                  the app<br> analyzes resumes, academic performance, and industry trends to predict the likelihood 
-                  of <br>successful job placements. Users receive personalized recommendations for skill enhancement<br>
-                   and educational paths, ensuring alignment with current market demands. The app also provides<br> insights
-                    into company hiring patterns, interview preparation tips, and real-time notifications for <br>relevant 
-                    job opportunities. With a user-friendly interface and seamless navigation, this app<br> aims to revolutionize
-                     career planning by offering data-driven predictions and actionable<br> insights, ultimately enhancing
-                      individuals' employability and success in securing their<br> desired placements.</p>
-
-                
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <footer class="footer">
+        <p>&copy; 2026 Placement Predictor. Powering the next generation of professionals.</p>
+    </footer>
 </body>
+
 </html>

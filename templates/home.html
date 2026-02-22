@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>PLACEMENT PREDICTION</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style1.css') }}"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Predictor | Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
+    <nav class="navbar">
+        <a href="/" class="logo">Placement Predictor</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/index">Predict Now</a>
+        </div>
+    </nav>
 
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">PLACEMENT PREDICTION</h2>
+    <header class="hero">
+        <div class="container">
+            <h1>Maximize Your Career Potential</h1>
+            <p>Empowering students with data-driven insights. Predict your placement success and salary expectations
+                with 92% accuracy.</p>
+            <a href="/index" class="btn btn-primary" style="width: auto; padding: 1rem 3rem;">Get Started Free</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card" style="margin-top: -80px; text-align: center;">
+            <h2 style="margin-bottom: 2rem; color: var(--primary-color);">Why Use Placement Predictor?</h2>
+            <div class="form-grid">
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">🎯 High Accuracy</h3>
+                    <p style="color: var(--text-muted);">Trained on thousands of real-world student profiles for
+                        industry-leading prediction reliability.</p>
+                </div>
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">💰 Salary Estimation</h3>
+                    <p style="color: var(--text-muted);">Get a realistic expectation of your starting package based on
+                        your current skill set and academics.</p>
+                </div>
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">💡 Career Guidance</h3>
+                    <p style="color: var(--text-muted);">Identify gaps in your profile early and work on the skills that
+                        matter most to recruiters.</p>
+                </div>
             </div>
+        </div>
+    </main>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/about">ABOUT</a></li>
-                    
-                    
-                </ul>
-            </div>
-
-            
-        </div> 
-        <div class="content">
-            <h1>WELCOME TO<br><span>PLACEMENT</span><br>PREDICTION APP</h1>
-            <p class="par">A Placement Prediction App is a tool designed to assist individuals, usually students or 
-                job seekers , in predicting <br> or estimating their chances of securing a job or internship placement. 
-                This type of application typically leverages<br> various data points and algorithms to provide users 
-                with insights into their potential success in the job market.</p>
-
-                <button class="cn"><a href="/index">PREDICT</a></button>
-
-                
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <footer class="footer">
+        <p>&copy; 2026 Placement Predictor. Powering the next generation of professionals.</p>
+    </footer>
 </body>
+
 </html>
