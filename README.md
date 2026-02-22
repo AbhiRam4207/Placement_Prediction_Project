@@ -1,12 +1,19 @@
 # Placement Prediction using Machine Learning
 
-This project aims to predict student placement outcomes and expected salary using machine learning. It is designed to help students—especially from Tier-2 and Tier-3 colleges—understand how their academic background, technical skills, and extracurricular activities impact their placement chances.
+This project presents a machine learning–based system that predicts student placement probability and expected salary. It is primarily designed to support students—especially from Tier-2 and Tier-3 institutions—in understanding how academic performance, technical skills, and extracurricular activities influence placement outcomes.
+
+The application provides analytical insights rather than a simple binary result, enabling students to make informed decisions about skill development and career preparation.
+
+---
 
 ## ✨ Final Output
 
-<img src="static/images/placement_screenshot_1.png" alt="Placement Screenshot 1" width="100%">
-<img src="static/images/placement_screenshot_2.png" alt="Placement Screenshot 2" width="100%">
-<img src="static/images/placement_screenshot_3.png" alt="Placement Screenshot 3" width="100%">
+<img src="static/images/placement_screenshot_1.png" alt="Placement Predictor Home Page" width="100%">
+
+<img src="static/images/placement_screenshot_2.png" alt="Student Profile Input Form" width="100%">
+
+<img src="static/images/placement_screenshot_3.png" alt="Placement Prediction Result" width="100%">
+
 ---
 
 ## 📚 Table of Contents
@@ -19,7 +26,7 @@ This project aims to predict student placement outcomes and expected salary usin
 - [Model Training](#model-training)
 - [Evaluation](#evaluation)
 - [Results](#results)
-- [Flask App](#flask-app)
+- [Flask Application](#flask-application)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -27,45 +34,43 @@ This project aims to predict student placement outcomes and expected salary usin
 
 ## 🧠 Overview
 
-Campus placements are one of the most critical phases for engineering students. This project provides a smart prediction tool using machine learning algorithms (Random Forest Classifier and Decision Trees) to predict:
+Campus placements play a crucial role in shaping students’ careers. This project introduces an intelligent placement prediction system using machine learning algorithms such as the **Random Forest Classifier** and **Decision Tree models** to estimate:
 
-- Whether a student will be placed.
-- Expected salary if placed.
+- The probability of a student getting placed  
+- The expected salary package if placed  
 
-The project also includes a web app built with Flask for real-time predictions.
+Additionally, a Flask-based web application enables real-time predictions through a user-friendly interface.
 
 ---
 
 ## ❓ Problem Statement
 
-Many students from Tier-2 and Tier-3 colleges face difficulty in understanding how their profile affects their placement outcomes. Institutions also lack predictive systems for early career guidance. This project addresses the gap by building a data-driven placement and salary prediction system.
+Students from Tier-2 and Tier-3 colleges often lack clear insights into how their academic profile and skill set impact placement opportunities. Similarly, institutions do not always have data-driven tools to provide early career guidance. This project addresses these challenges by developing a predictive system that evaluates multiple student attributes and generates meaningful placement and salary predictions.
 
 ---
 
 ## 📊 Dataset
 
-The datasets include the following student features:
+The datasets used in this project include various academic, technical, and experiential attributes such as:
 
-- CGPA (Cumulative GPA)
-- Technical and soft skills
-- Internships and hackathon participation
-- Communication skills (rating)
-- Academic percentages (10th & 12th)
-- Number of projects, certifications, backlogs, etc.
+- CGPA (Cumulative Grade Point Average)  
+- Technical and soft skills  
+- Internship and hackathon participation  
+- Communication skills rating  
+- Academic performance (10th and 12th percentages)  
+- Number of projects, certifications, and active backlogs  
 
-The data is stored in:
-
-- Datasets/Placement_Prediction_data.xlsx
-- Datasets/Salary_prediction_data.xlsx
+Dataset files:
+- `Datasets/Placement_Prediction_data.xlsx`  
+- `Datasets/Salary_prediction_data.xlsx`  
 
 ---
 
 ## 💻 Installation
 
-To run this project locally:
+To run this project locally, follow the steps below:
 
 1. Clone the repository:
-
 ```bash
 git clone https://github.com/yourusername/Placement_Prediction_Project.git
 cd Placement_Prediction_Project
